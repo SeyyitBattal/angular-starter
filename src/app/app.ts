@@ -7,13 +7,14 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-root',
   imports: [RouterOutlet, RouterModule, FormsModule],
   template:`
-  <h1>Hello world!</h1>
-  <a routerLink="home">Home</a> |
-  <a routerLink="profile">Profile</a> |
-  <a routerLink="settings">Settings</a> <br>
+  <h1>Angular</h1>
+  <a routerLinkActive="active" routerLink="home">Home</a> |
+  <a routerLinkActive="active" routerLink="profile">Profile</a> |
+  <a routerLinkActive="active" routerLink="settings">Settings</a> <br>
   <hr>
   <router-outlet></router-outlet>
-  `
+  `,
+  //styles:[".active{color:orange; }"]
 })
 
 export class App {

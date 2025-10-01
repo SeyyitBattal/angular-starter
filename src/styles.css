@@ -1,1 +1,83 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #0f0f0f;
+  color: #ffffff;
+  line-height: 1.6;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+h1 {
+  color: #ffffff;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+a {
+  text-decoration: none;
+  color: #888;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  margin: 0 0.25rem;
+}
+
+a:hover {
+  color: #ffffff;
+  background: #1a1a1a;
+}
+
+a.active {
+  color: #ffa500;
+  background: #1a1a1a;
+}
+
+hr {
+  border: none;
+  height: 3px;
+  background: #333;
+  margin: 1rem 0;
+}
+
+router-outlet + * {
+  display: block;
+  max-width:1000px;
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  a {
+    display: block;
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+}
+
+router-outlet {
+  display: block;
+  animation: fadeIn 0.3 ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
