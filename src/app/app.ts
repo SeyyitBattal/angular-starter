@@ -9,14 +9,14 @@ import { FormsModule } from '@angular/forms';
   template:`
   <h1>Angular</h1>
   <a routerLinkActive="active" routerLink="home">Home</a> |
+  <a routerLinkActive="active" routerLink="products">Products</a> |
   <a routerLinkActive="active" routerLink="profile">Profile</a> |
   <a routerLinkActive="active" routerLink="settings">Settings</a> <br>
   <hr>
   <router-outlet></router-outlet>
   `,
-  //styles:[".active{color:orange; }"]
 })
 
 export class App {
-
+ 
 }
