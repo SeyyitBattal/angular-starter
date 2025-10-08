@@ -1,11 +1,16 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterOutlet, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-product-component',
-  imports: [],
+  imports: [RouterOutlet, RouterLink],
   template:`
-  <div>Product component!</div>
+  <ul>
+    <li style="margin: 12px">Product 1 <br>
+    <a [routerLink]="['detail',1]">Product-1 Detail</a>
+    </li>
+  </ul>
+  <router-outlet></router-outlet>
   `,
   standalone:true,
 })
