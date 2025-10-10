@@ -7,6 +7,9 @@ import { ProductComponent } from "../components/products/product-component";
 import { ProductsDetail } from "../components/products/products-detail";
 import { ProductOverview } from "../components/products/product-overview";
 import { AddCart } from "../components/products/add-cart";
+import { StoreLogin } from "../components/store-login/store-login";
+import { canActGuard } from "../guards/can-act-guard";
+import { canActChildGuard } from "../guards/can-act-child-guard";
 
 export const routes : Routes = [
     {path: "", redirectTo:"/home", pathMatch: "full"},
@@ -17,12 +20,18 @@ export const routes : Routes = [
                 children: [
                     {path:"overview", component: ProductOverview},
                     {path:"addCart", component: AddCart}
-                ]
+                ],
+                canActivateChild:[
+                    canActChildGuard
+                ],
             }, 
         ]
     },
     {path: "products/:desktop", component: ProductComponent},
     {path:"profile", component: Profile},
+    {path: "storeEntrance", component: StoreLogin,
+        canActivate:[canActGuard],
+    },
     {path:"settings", component: Settings},
     {path:"**", component: ErrorPage}
 ];

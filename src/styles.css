@@ -22,6 +22,137 @@ h1 {
   letter-spacing: -0.5px;
 }
 
+/* Input Elements */
+input, textarea, select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
+  background: #1a1a1a;
+  border: 2px solid #333;
+  border-radius: 8px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #ffa500;
+  box-shadow: 0 0 0 3px rgba(255, 165, 0, 0.1);
+}
+
+input::placeholder, textarea::placeholder {
+  color: #666;
+}
+
+input:disabled, textarea:disabled, select:disabled {
+  background: #333;
+  color: #888;
+  cursor: not-allowed;
+}
+
+/* Textarea specific styles */
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Select dropdown */
+select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 16px;
+  padding-right: 2.5rem;
+  appearance: none;
+}
+
+button {
+  background: #ffa500;
+  color: #2b2b2b;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem 0.25rem;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+button:hover {
+  background: #ffb732;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 165, 0, 0.2);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(255, 165, 0, 0.3);
+}
+
+button:disabled {
+  background: #444;
+  color: #666;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+button.secondary {
+  background: transparent;
+  color: #ffa500;
+  border: 2px solid #ffa500;
+}
+
+button.secondary:hover {
+  background: rgba(255, 165, 0, 0.1);
+}
+
+button.danger {
+  background: #dc3545;
+  color: white;
+}
+
+button.danger:hover {
+  background: #c82333;
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.2);
+}
+
+button.outline {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #555;
+}
+
+button.outline:hover {
+  background: #333;
+  border-color: #666;
+}
+
+button.small {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+button.large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+button.full-width {
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
 a {
   text-decoration: none;
   color: #888;
@@ -51,30 +182,14 @@ hr {
 
 router-outlet + * {
   display: block;
-  max-width:1000px;
+  max-width: 400px;
   margin: 0 auto;
   padding: 0.5rem;
 }
 
-@media (max-width: 768px) {
-  body {
-    padding: 1rem;
-  }
-  
-  h1 {
-    font-size: 2rem;
-  }
-  
-  a {
-    display: block;
-    margin: 0.5rem 0;
-    text-align: center;
-  }
-}
-
 router-outlet {
   display: block;
-  animation: fadeIn 0.3 ease;
+  animation: fadeIn 0.3s ease;
 }
 
 @keyframes fadeIn {

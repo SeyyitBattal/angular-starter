@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
   <a routerLinkActive="active" routerLink="home">Home</a> |
   <a routerLinkActive="active" routerLink="products">Products</a> |
   <a routerLinkActive="active" routerLink="profile">Profile</a> |
+  <a routerLink="active" routerLink="storeEntrance">Store Entrance</a> |
   <a routerLinkActive="active" routerLink="settings">Settings</a> <br>
   <hr>
   <router-outlet></router-outlet>
