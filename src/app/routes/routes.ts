@@ -1,6 +1,6 @@
 import { Routes } from "@angular/router";
 import { Home } from "../components/home/home";
-import { Profile } from "../components/profile/profile";
+import { Photos } from "../components/photos/photos";
 import { Settings } from "../components/settings/settings";
 import { ErrorPage } from "../components/error-page/error-page";
 import { ProductComponent } from "../components/products/product-component";
@@ -28,7 +28,7 @@ export const routes : Routes = [
         ]
     },
     {path: "products/:desktop", component: ProductComponent},
-    {path:"profile", component: Profile},
+    {path:"photos", component: Photos},
     {path: "storeEntrance", component: StoreLogin,
         canActivate:[canActGuard],
         canDeactivate:[canDeactiveGuard],

@@ -1,29 +1,26 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { RouterLink, RouterOutlet } from "@angular/router";
 
 @Component({
-  selector: 'app-profile',
+  selector: 'app-photos',
   template: `
-  <div>Profile Page!</div>
-
+  <div>Photos Page!</div>
   <router-outlet></router-outlet>
-
   <br>
   <ul>
     @for (photo of photos; track $index) {
     <li>
-      <a [routerLink]="[photo.id]">{{photo.url}}</a>
+      <a [routerLink]="[photo.id]">{{photo.title}}</a>
     </li>
     }
   </ul>
   `,
-  standalone:true,
+  
   imports: [RouterLink, RouterOutlet],
 })
-export class Profile implements OnInit {
-
-  constructor(private httpClient : HttpClient){}
+export class Photos implements OnInit {
+ private httpClient = inject(HttpClient);
 
 photos: any;
 ngOnInit(): void {
