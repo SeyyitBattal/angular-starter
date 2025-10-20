@@ -31,7 +31,7 @@ export const routes : Routes = [
     {path: "products/:desktop", component: ProductComponent},
     {path:"photos", component: Photos},
     {path:"blog", component: Blog, 
-        data:{ data1: "This is data1 from route data passing" , data2: "This is data2 from route data passing"} 
+        data:{ data1: "data1 from route data passing" , data2: "data2 from route data passing"} 
     },
     {path: "storeEntrance", component: StoreLogin,
         canActivate:[canActGuard],

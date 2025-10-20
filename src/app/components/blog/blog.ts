@@ -19,6 +19,7 @@ export class Blog implements OnInit{
   ngOnInit(): void {
     this.activatedRoute.data.subscribe(data => {
       this._data = data;
+      console.log("Route Datas:", this._data);
     });
   }
 }

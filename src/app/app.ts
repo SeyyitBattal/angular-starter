@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { RouterOutlet,RouterModule, RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { CustomModule } from './custom/custom-module';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterModule, FormsModule, RouterLink],
+  imports: [RouterOutlet, RouterModule, RouterLink, FormsModule, CustomModule],
   template:`
   <h1>Angular</h1>
   <a routerLinkActive="active" routerLink="home">Home</a> |
