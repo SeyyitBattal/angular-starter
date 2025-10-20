@@ -11,7 +11,7 @@ import { RouterLink, RouterOutlet } from "@angular/router";
   <ul>
     @for (photo of photos; track $index) {
     <li>
-      <a [routerLink]="[photo.id]">{{photo.title}}</a>
+      <a [routerLink]="[photo.id]">{{photo.url}}</a>
     </li>
     }
   </ul>

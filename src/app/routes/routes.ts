@@ -10,6 +10,7 @@ import { AddCart } from "../components/products/add-cart";
 import { StoreLogin } from "../components/store-login/store-login";
 import { canActGuard, canDeactiveGuard } from "../guards/guards";
 import { canActChildGuard } from "../guards/guards";
+import { Blog } from "../components/blog/blog";
 
 export const routes : Routes = [
     {path: "", redirectTo:"/home", pathMatch: "full"},
@@ -25,10 +26,13 @@ export const routes : Routes = [
                     canActChildGuard
                 ],
             }, 
-        ]
+        ] 
     },
     {path: "products/:desktop", component: ProductComponent},
     {path:"photos", component: Photos},
+    {path:"blog", component: Blog, 
+        data:{ data1: "This is data1 from route data passing" , data2: "This is data2 from route data passing"} 
+    },
     {path: "storeEntrance", component: StoreLogin,
         canActivate:[canActGuard],
         canDeactivate:[canDeactiveGuard],
