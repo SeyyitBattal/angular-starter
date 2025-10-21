@@ -14,6 +14,8 @@ import { CustomModule } from './custom/custom-module';
   <a routerLinkActive="active" routerLink="photos">Photos</a> |
   <a routerLinkActive="active" routerLink="blog">Blog</a> |
   <a routerLink="active" routerLink="storeEntrance">Store Entrance</a> |
+  <a routerLinkActive="active" routerLink="account">Account</a> |
+  <a routerLinkActive="active" routerLink="favorities">Favorities</a> |
   <a routerLinkActive="active" routerLink="settings">Settings</a> <br>
   <hr>
   <router-outlet></router-outlet>
