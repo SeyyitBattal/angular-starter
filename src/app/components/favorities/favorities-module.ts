@@ -6,9 +6,7 @@ import { RouterModule } from '@angular/router';
 import { Favorities } from './favorities';
 
 @NgModule({
-  declarations: [
-   
-  ],
+  declarations: [],
   imports: [
     CommonModule,
     RouterModule.forChild([

@@ -6,9 +6,7 @@ import { RouterModule } from '@angular/router';
 import { Account } from './account';
 
 @NgModule({
-  declarations: [
-    
-  ],
+  declarations: [],
   imports: [
     CommonModule,
     RouterModule.forChild([

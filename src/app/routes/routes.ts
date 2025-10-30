@@ -11,8 +11,6 @@ import { StoreLogin } from "../components/store-login/store-login";
 import { canActGuard, canDeactiveGuard } from "../guards/guards";
 import { canActChildGuard } from "../guards/guards";
 import { Blog } from "../components/blog/blog";
-import { Account } from "../components/account/account";
-import { Favorities } from "../components/favorities/favorities";
 
 export const routes : Routes = [
     {path: "", redirectTo:"/home", pathMatch: "full"},
@@ -39,12 +37,12 @@ export const routes : Routes = [
         canActivate:[canActGuard],
         canDeactivate:[canDeactiveGuard],
     },
-{
-  path: "account",
-  loadChildren: () => import("../components/account/account-module").then(m => m.AccountModule)
-},
+    {path: "account",
+    loadChildren: () => import("../components/account/account-module").then(m => m.AccountModule)
+    },
     {path:"favorities", 
-        loadChildren: () => import("../components/favorities/favorities-module").then(m => m.FavoritiesModule)},
+    loadChildren: () => import("../components/favorities/favorities-module").then(m => m.FavoritiesModule)
+    },
     {path:"settings", component: Settings},
     {path:"**", component: ErrorPage}
 ];
