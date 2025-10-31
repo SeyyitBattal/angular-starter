@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { RouterOutlet,RouterModule, RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
@@ -25,5 +25,8 @@ import { CustomModule } from './custom/custom-module';
 })
 
 export class App {
- 
+  constructor(@Inject("url") private url: string){
+  console.log(url);
+  }
+
 }

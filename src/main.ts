@@ -7,7 +7,8 @@ import { routes } from './app/routes/routes';
 
 bootstrapApplication(App, {
   providers: [
-    provideRouter(routes)    
+    provideRouter(routes),
+    {provide: "url", useValue: "https://github.com/SeyyitBattal"}
   ]
 }).catch(err => console.error(err));
 
