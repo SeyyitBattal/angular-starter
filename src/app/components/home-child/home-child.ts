@@ -4,9 +4,11 @@ import { Component } from '@angular/core';
   selector: 'app-home-child',
   imports: [],
   template:`
-  <div style="background-color: darkviolet;">
-    <p>HomeChild component!</p>
- <ng-content></ng-content>
+  <div>
+ <ng-content select="header"></ng-content>
+ <ng-content select="body"></ng-content>
+ <ng-content select="footer"></ng-content>
+ <ng-content select=".footerInfo"></ng-content>
  </div>
   `,
   standalone:true,

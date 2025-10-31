@@ -16,8 +16,11 @@ import { HomeChild } from "../home-child/home-child";
   <input type="text" [(ngModel)] = "data">
   {{data}}
   <app-home-child>
-    <span style="color: chocolate;">This came with ng-content!</span>
-  </app-home-child>
+    <header>ng-content HEADER</header>
+    <!-- <body>ng-content BODY</body> -->
+    <footer>ng-content FOOTER</footer>
+    <div class="footerInfo">Footer information line</div>
+    </app-home-child>
   `,
   standalone: true,
   imports: [Custom, FormsModule, HomeChild]
