@@ -16,6 +16,7 @@ import { NgTemplateOutlet } from "@angular/common";
 
   <input type="text" [(ngModel)] = "data">
   {{data}}
+  <hr>
 
   <app-home-child>
     <header>ng-content HEADER</header>
@@ -29,6 +30,18 @@ import { NgTemplateOutlet } from "@angular/common";
     </ng-container>
     <ng-template #templateArea>
       ng-template içeriği...
+    </ng-template> 
+    <br>
+
+  <!--Veri gönderilecekse aşağıdaki şekilde uygulanır.-->
+    <ng-container [ngTemplateOutlet]= "tempTemp" [ngTemplateOutletContext]="{numberData1: 123, numberData2:456, numberData3: 789}">
+      Container area!
+    </ng-container>
+    <ng-template #tempTemp let-number1="numberData1" let-number2="numberData2" let-number3="numberData3">
+      Template area! <br>
+      number 1: {{number1}} <br>
+      number 2: {{number2}} <br>
+      number 3: {{number3}} <br>
     </ng-template>
 
   `,
